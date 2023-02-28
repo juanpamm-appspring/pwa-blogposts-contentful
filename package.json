@@ -1,0 +1,27 @@
+{
+  "name": "pwa-blogposts-contentful",
+  "version": "1.0.0",
+  "description": "Package that connects Salesforce PWA kit with contentful for Blogposts",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf dist && NODE_ENV=production babel pages --out-dir dist --copy-files",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanpamm-appspring/pwa-blogposts-contentful.git"
+  },
+  "author": "Juan Moreno",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juanpamm-appspring/pwa-blogposts-contentful/issues"
+  },
+  "homepage": "https://github.com/juanpamm-appspring/pwa-blogposts-contentful#readme",
+  "dependencies": {
+    "@chakra-ui/react": "^2.5.1",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "contentful": "^9.3.3",
+    "framer-motion": "^10.0.1"
+  }
+}
