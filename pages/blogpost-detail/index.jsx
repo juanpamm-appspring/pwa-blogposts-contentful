@@ -1,6 +1,4 @@
 import React from "react"
-import PropTypes from 'prop-types'
-import { getBlogPost } from "../../contentful-manager/contentful-fetch"
 import {
     Box,
     Stack,
@@ -9,10 +7,7 @@ import {
     Image
 } from "@chakra-ui/react"
 
-const BlogpostDetail = ({ blogPost }) => {
-    if (!blogPost) {
-        return <Box>Loading...</Box>
-    }
+const BlogpostDetail = (blogPost) => {
 
     return (
         <Box marginBottom={'50px'}>
@@ -38,16 +33,6 @@ const BlogpostDetail = ({ blogPost }) => {
             </Stack>
         </Box>
     )
-}
-BlogpostDetail.getProps = async ({ params }) => {
-    const blogPost = await getBlogPost(params.blogpostId)
-
-    return { blogPost }
-}
-BlogpostDetail.getTemplateName = () => 'blogpost-detail'
-
-BlogpostDetail.propTypes = {
-    blogPost: PropTypes.object
 }
 
 export default BlogpostDetail

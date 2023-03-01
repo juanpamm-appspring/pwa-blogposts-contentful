@@ -1,4 +1,5 @@
-import BlogpostList from "./pages/blogpost-list";
-import BlogpostDetail from "./pages/blogpost-detail";
+import BlogpostList from "./pages/blogpost-list"
+import BlogpostDetail from "./pages/blogpost-detail"
+import { getBlogPost, getBlogPosts } from "./contentful-manager/contentful-fetch"
 
-export { BlogpostList, BlogpostDetail }
+export { getBlogPost, getBlogPosts, BlogpostList, BlogpostDetail }
