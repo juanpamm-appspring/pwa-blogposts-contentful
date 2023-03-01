@@ -1,10 +1,10 @@
 {
   "name": "pwa-blogposts-contentful",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Package that connects Salesforce PWA kit with contentful for Blogposts",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "build": "rm -rf dist && NODE_ENV=production babel pages --out-dir dist --copy-files",
+    "build": "npx babel src --out-dir dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,5 +23,11 @@
     "@emotion/styled": "^11.10.6",
     "contentful": "^9.3.3",
     "framer-motion": "^10.0.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6"
   }
 }
