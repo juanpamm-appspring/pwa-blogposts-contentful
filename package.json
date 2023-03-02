@@ -1,6 +1,6 @@
 {
   "name": "pwa-blogposts-contentful",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Package that connects Salesforce PWA kit with contentful for Blogposts",
   "main": "dist/index.js",
   "scripts": {
@@ -18,16 +18,33 @@
   },
   "homepage": "https://github.com/juanpamm-appspring/pwa-blogposts-contentful#readme",
   "dependencies": {
-    "@chakra-ui/react": "^2.5.1",
-    "@emotion/react": "^11.10.6",
-    "@emotion/styled": "^11.10.6",
-    "contentful": "^9.3.3",
-    "framer-motion": "^10.0.1"
+    "contentful": "^9.3.3"
+  },
+  "peerDependencies": {
+    "@chakra-ui/icons": "^1.0.6",
+    "@chakra-ui/react": "^1.7.1",
+    "@chakra-ui/skip-nav": "^1.1.4",
+    "@emotion/react": "^11.1.5",
+    "@emotion/styled": "^11.1.5",
+    "framer-motion": "^3.7.0",
+    "prop-types": "^15.6.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.1.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.21.0",
     "@babel/core": "^7.21.0",
     "@babel/preset-env": "^7.20.2",
-    "@babel/preset-react": "^7.18.6"
+    "@babel/preset-react": "^7.18.6",
+    "@chakra-ui/icons": "^1.0.6",
+    "@chakra-ui/react": "^1.7.1",
+    "@chakra-ui/skip-nav": "^1.1.4",
+    "@emotion/react": "^11.1.5",
+    "@emotion/styled": "^11.1.5",
+    "prop-types": "^15.6.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.1.2"
   }
 }
