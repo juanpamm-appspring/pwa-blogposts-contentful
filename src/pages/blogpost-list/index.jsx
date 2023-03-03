@@ -1,6 +1,5 @@
-import React from "react"
-import PropTypes from 'prop-types'
 import { NavLink } from 'react-router-dom'
+import React, { useEffect, useState } from "react"
 import { getBlogPosts } from "../../contentful-manager/contentful-fetch"
 import { 
     Box, 
@@ -12,7 +11,18 @@ import {
     Link
 } from "@chakra-ui/react"
 
-const BlogpostList = ({ blogPosts }) => {
+const BlogpostList = () => {
+    const [blogPosts, setBlogPosts] = useState()
+
+    useEffect(() => {
+        const fetchBlogposts = async () => {
+            const blogsRes = await getBlogPosts()
+            setBlogPosts(blogsRes)
+        }
+
+        fetchBlogposts()
+    }, [])
+
     if (!blogPosts) {
         return <Box>Loading...</Box>
     }
@@ -53,15 +63,6 @@ const BlogpostList = ({ blogPosts }) => {
             </Stack>
         </Box>
     )
-}
-BlogpostList.getProps = async () => {
-    const blogPosts = await getBlogPosts()
-    return { blogPosts }
-}
-BlogpostList.getTemplateName = () => 'blogpost-list'
-
-BlogpostList.propTypes = {
-    blogPosts: PropTypes.array
 }
 
 export default BlogpostList
