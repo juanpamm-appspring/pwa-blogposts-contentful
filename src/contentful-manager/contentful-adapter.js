@@ -16,6 +16,16 @@ const adaptImage = (image) => {
     }
 }
 
+const adaptCategory = (data) => {
+    const { sys, fields } = data
+
+    return {
+        id: sys.id,
+        name: fields.name,
+        description: fields.description
+    }
+}
+
 export const adaptBlogPost = (data) => {
     const { sys, fields } = data
 
@@ -27,7 +37,8 @@ export const adaptBlogPost = (data) => {
         author: fields.author ? fields.author : null,
         postImage: adaptImage(fields.postImage),
         createdAt: sys.createdAt ? sys.createdAt : null,
-        updatedAt: sys.updatedAt ? sys.updatedAt : null
+        updatedAt: sys.updatedAt ? sys.updatedAt : null,
+        category: adaptCategory(fields.category)
     }
 }
 

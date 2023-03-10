@@ -5,6 +5,7 @@ import {
     Box,
     Stack,
     Heading,
+    HStack,
     Text,
     Image
 } from "@chakra-ui/react"
@@ -38,6 +39,10 @@ const BlogpostDetail = () => {
                 </Heading>
                 <Text>By {blogPostDetail.author}</Text>
                 <Text fontSize={14} fontStyle={'italic'}>Published on {blogPostDetail.createdAt}</Text>
+                <HStack>
+                    <Text as={'span'} fontSize={14} fontWeight={'bold'}> Category: </Text>
+                    <Text as={'span'} fontSize={14}> {blogPostDetail.category.name} </Text>
+                </HStack>
                 <Box width={'50%'}>
                     <Image
                         src={`https:${blogPostDetail.postImage.url}`}
