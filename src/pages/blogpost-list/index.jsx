@@ -24,7 +24,7 @@ const BlogpostList = () => {
         const categoriesArray = blogs.map(blog => {
             return blog.category.name
         })
-        const uniqueCategories = Array.from(new Set(categoriesArray))
+        const uniqueCategories = categoriesArray.filter((cat, index) => categoriesArray.indexOf(cat) === index)
         setCategories(uniqueCategories)
     }
 
@@ -88,7 +88,7 @@ const BlogpostList = () => {
                         <Link 
                             key={index}
                             as={NavLink}
-                            to={`blogpost-detail/${blog.id}`}
+                            to={`/blogpost-detail/${blog.id}`}
                         >
                             <Box>
                                 <HStack>
